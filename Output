@@ -1,1 +1,14 @@
 
+Real-time Distance Monitoring:
+
+The serial monitor displays the distance measured by the ultrasonic sensor.
+
+Object Detection:
+
+When an object is detected within 10 cm, the dustbin lid automatically opens, and the buzzer emits a beep sound.
+
+The lid remains open for 3 seconds before closing.
+
+No Object Scenario:
+
+If no object is detected, the lid remains closed, and the buzzer stays off.
