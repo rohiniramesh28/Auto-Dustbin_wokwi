@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "author": "Sivanesan B",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 19.8, "left": -0.6, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -152.1,
+      "left": 111.1,
+      "attrs": { "distance": "2" }
+    },
+    { "type": "wokwi-servo", "id": "servo1", "top": -11.6, "left": 316.8, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 136.8,
+      "left": 385.8,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "ultrasonic1:VCC", "uno:5V", "red", [ "v28.8", "h-192", "v259.2", "h163.2" ] ],
+    [ "ultrasonic1:GND", "uno:GND.1", "black", [ "v48", "h-1.2" ] ],
+    [ "servo1:V+", "uno:5V", "green", [ "h-28.8", "v172.9", "h-124.8" ] ],
+    [ "bz1:1", "uno:GND.2", "green", [ "v28.8", "h-201.6" ] ],
+    [ "servo1:GND", "uno:GND.3", "black", [ "h-28.8", "v182.4", "h-76.8", "v9.6", "h-28.8" ] ],
+    [ "ultrasonic1:TRIG", "uno:2", "green", [ "v38.4", "h47.6" ] ],
+    [ "ultrasonic1:ECHO", "uno:3", "green", [ "v48", "h8.8" ] ],
+    [ "uno:4", "bz1:2", "green", [ "v-19.2", "h311.1", "v249.6", "h-105.6" ] ],
+    [ "servo1:PWM", "uno:9", "green", [ "h-48", "v-76.6", "h-105.6" ] ]
+  ],
+  "dependencies": {}
+}
